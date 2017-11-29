@@ -32,13 +32,22 @@ prefer. I suggest using Sublime Text 3, available to download for free [here](ht
     
          git push
          
-         
+## Contents of the repository
+
+### picam
+
+Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point. The Local IP address for accessing picam is [171.20.11.10/html/picam](171.20.11.10/html/picam). 
+
+### PiViewer 
+
+PiViewer is an localhost HTML/CSS/JS interface for streaming Google Cardboard - compatible livestream from the RPi camera. The Local IP address for accessing picam is [171.20.11.10/html/picam](171.20.11.10/html/PiViewer).
+
 ## Problem Statement 
 
 Currently, there are few consumer solutions on the market that integrate Virtual Reality and Drones.
 Being able to use VR for controlling the drone allows for more intuitive control, which has applications in a variety of fields, where full immersion control is an unmet need, such as surveillance, emergency rescue services, reconnaissance in hard-to-reach areas, and entertainment.
 
-## Equipment, Materials and Software Used
+## Hardware Used
 
 ### 1 . [Raspberry Pi 3 Model B](https://www.raspberrypi.org)
 
@@ -54,4 +63,14 @@ A nice camera that is meant for use with Raspberry Pi. Full specs in the link ab
 
 ### 4. [Samsung 32GB 95MB/s (U1) MicroSD EVO Select Memory Card](https://www.samsung.com/us/computing/memory-storage/memory-cards/microsdhc-evo-select-memory-card-w--adapter-32gb--2017-model--mb-me32ga-am/)
 
-32GB memory card compatible for use as Raspberry Pi storage. Full specs in the link above. It can be purchased on Amazon [here](https://www.amazon.com/Raspberry-5MP-Camera-Board-Module/dp/B00E1GGE40).
+32GB memory card compatible for use as Raspberry Pi storage. Full specs in the link above. It can be purchased on Amazon [here](https://www.amazon.com/dp/B01DOB6Y5Q/ref=sspa_dk_detail_6?psc=1).
+
+## Software Used
+
+### 1. [Apache2 Server](http://httpd.apache.org)
+
+Apache2 was installed on the Raspberry Pi to run a local HTTP server to broadcast what the camera is currently seeing over the local network.
+
+### 2. [Arduino](https://www.arduino.cc)
+
+Arduino software was used for calibrating the the servo, as well as programming it to respond to the gyroscopic inputs. Downloadable for desktop [here](https://www.arduino.cc/en/Main/Software), as an online editor (Arduino create) [here](https://create.arduino.cc).
