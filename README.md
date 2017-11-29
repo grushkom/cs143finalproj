@@ -1,3 +1,4 @@
+# ![](http://micro.seas.harvard.edu/images/SEASLogo_RGB.jpg) 
 # CS 143 Final Project
 # VR Camera with Gyroscopic Control
 # Mikhail Grushko and Matthew Li
