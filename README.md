@@ -37,11 +37,11 @@ prefer. I suggest using Sublime Text 3, available to download for free [here](ht
 
 ### picam
 
-Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point. The Local IP address for accessing picam is [171.20.11.10/html/picam](171.20.11.10/html/picam). 
+Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point. The Local IP address for accessing picam is [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/). 
 
 ### PiViewer 
 
-PiViewer is an localhost HTML/CSS/JS interface for streaming Google Cardboard - compatible livestream from the RPi camera. The Local IP address for accessing picam is [171.20.11.10/html/picam](171.20.11.10/html/PiViewer).
+PiViewer is an localhost HTML/CSS/JS interface for streaming Google Cardboard - compatible livestream from the RPi camera. The Local IP address for accessing picam is [http://171.20.11.10/html/PiViewer/](http://171.20.11.10/html/PiViewer/).
 
 ## Problem Statement 
 
