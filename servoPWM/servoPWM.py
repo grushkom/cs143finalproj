@@ -6,7 +6,7 @@ import time
 SERVO_PIN = 32
 
 def ang2duty (angle):
-        DutyCycle = (angle/15) + 0
+        DutyCycle = (angle/18) + 2
         return DutyCycle
 
 if __name__ == '__main__':
@@ -32,24 +32,24 @@ if __name__ == '__main__':
 			servo.ChangeDutyCycle(ang2duty(0))
 			# Sleep for 5 Seconds 
 			time.sleep(5)
-            # Changing the Duty Cycle to rotate the motor 
+                        # Changing the Duty Cycle to rotate the motor
 			servo.ChangeDutyCycle(ang2duty(30))
-			# Sleep for 5 Seconds 
+			# Sleep for 5 Seconds
 			time.sleep(5)
-            servo.ChangeDutyCycle(ang2duty(60))
-			# Sleep for 5 Seconds 
+                        servo.ChangeDutyCycle(ang2duty(60))
+			# Sleep for 5 Seconds
 			time.sleep(5)
-            servo.ChangeDutyCycle(ang2duty(90))
-			# Sleep for 5 Seconds 
+                        servo.ChangeDutyCycle(ang2duty(90))
+			# Sleep for 5 Seconds
 			time.sleep(5)
-            servo.ChangeDutyCycle(ang2duty(120))
-			# Sleep for 5 Seconds 
+                        servo.ChangeDutyCycle(ang2duty(120))
+			# Sleep for 5 Seconds
 			time.sleep(5)
 			servo.ChangeDutyCycle(ang2duty(150))
-			# Sleep for 5 Seconds 
+			# Sleep for 5 Seconds
 			time.sleep(5)
 			servo.ChangeDutyCycle(ang2duty(180))
-			# Sleep for 5 Seconds 
+			# Sleep for 5 Seconds
 			time.sleep(5)
 
 		except KeyboardInterrupt:
