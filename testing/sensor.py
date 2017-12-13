@@ -10,15 +10,14 @@ s.bind((host, port))
 
 print("Success binding")
 while 1:
-	try:
-		message, address = s.recvfrom(8192)
-		messageString = message.decode("utf-8")
-    	print(messageString)
-    	
-	except (KeyboardInterrupt, SystemExit):
-		raise
-	except:
-		traceback.print_exc()
+        try:
+                message, address = s.recvfrom(8192)
+                messageString = message.decode("utf-8")
+                print(messageString)
+        except (KeyboardInterrupt, SystemExit):
+                raise
+        except:
+                traceback.print_exc()
 
 # import socket, traceback
 
