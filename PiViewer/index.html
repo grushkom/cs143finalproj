@@ -74,7 +74,7 @@
             context.drawImage(piImage, 0, 0, canvas.width, canvas.height);
             texture.needsUpdate = true;
           }
-          piImage.src = "http://172.20.11.10/picam/cam_pic.php?time=" + new Date().getTime();
+          piImage.src = "http://172.20.10.11/picam/cam_pic.php?time=" + new Date().getTime();
         }
         requestAnimationFrame(animate);
         update();
