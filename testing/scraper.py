@@ -17,3 +17,4 @@ while True:
 	beta = data.text.strip() # strip() is used to remove starting and trailing
 
 	print (beta)
+	print (1)
