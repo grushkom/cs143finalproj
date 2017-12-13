@@ -1,4 +1,5 @@
 # ![](http://micro.seas.harvard.edu/images/SEASLogo_RGB.jpg) 
+# VRView - The Gyroscopic Drone Camera
 # CS 143 Final Project
 # VR Camera with Gyroscopic Control
 # Mikhail Grushko and Matthew Li
@@ -42,6 +43,10 @@ Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessibl
 ### PiViewer 
 
 PiViewer is an localhost HTML/CSS/JS interface for streaming Google Cardboard - compatible livestream from the RPi camera. The Local IP address for accessing picam is [http://171.20.11.10/html/PiViewer/](http://171.20.11.10/html/PiViewer/).
+
+### servoPWM
+
+ServoPWM is a folder with files that control the servo. It does so using Python, and specifically its library 
 
 ## Problem Statement 
 
