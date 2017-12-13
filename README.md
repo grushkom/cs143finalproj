@@ -1,13 +1,13 @@
 # ![](http://micro.seas.harvard.edu/images/SEASLogo_RGB.jpg)
 # VRView - The Gyroscopic Drone Camera
 # CS 143 Final Project
-# VR Camera with Gyroscopic Control
+# Virtual Reality Camera with Gyroscopic Control
 # Mikhail Grushko and Matthew Li
 # README
 
 ## Instructions for Using this Repository
 
-1. This is an open source project, so anyone can see the source code of the project. Feel free to browse or download the files in this repo. In order to get contributor priviliges, please talk to one of the team members.
+1. This is an open source project, so anyone can see the source code of the project. Feel free to browse or download the files in this repo. In order to get contributor privileges, please talk to one of the team members.
     If you want to copy this repository to your Raspberry Pi or any other machine, execute execute the following command inside the folder (where you want to store your repository) in your terminal:
 
         git clone https://github.com/grushkom/cs143finalproj.git
@@ -34,24 +34,46 @@ prefer. I suggest using Sublime Text 3, available to download for free [here](ht
 
          git push
 
-## Contents of the repository
+## Contents of the repository and Instructions
 
 ### picam
 
-Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point. The Local IP address for accessing picam is [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/).
+Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point.
+
+In order to launch picam, make sure your RPi, as well as all other devicea are connected to the same mobile hotspot, while RPi has [Apache2](https://httpd.apache.org). Check the status of the server by running the following in the terminal:
+
+    sudo service apache2 status
+
+If the apache server is not runnning for whatever reason, run the following:
+
+    sudo service apache2 start
+
+The server should be good to go. The picam itself will be accessible at the following link: [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/)
 
 ### PiViewer
 
 PiViewer is an localhost HTML/CSS/JS interface for streaming Google Cardboard - compatible livestream from the RPi camera. The Local IP address for accessing picam is [http://171.20.11.10/html/PiViewer/](http://171.20.11.10/html/PiViewer/).
 
+PiViewer is also run by the [Apache2](https://httpd.apache.org) server. Check the status of the server by running the following in the terminal:
+
+    sudo service apache2 status
+If the apache server is not runnning for whatever reason, run the following:
+
+    sudo service apache2 start.
+
+The server should be good to go. The picam itself will be accessible at the following link: [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/)
+
 ### servoPWM
 
-ServoPWM is a folder with files that control the servo. It does so using Python, and specifically its library ... 
+servoPWM is a folder with files that control the servo. It does so using Python, and specifically its library RPi.GPIO. The directory contains two files: calibration.py and servoPWM.py.
 
-## Problem Statement
+calibration.py is the file we used to calibrate the servo. In order to run it, first connect the servo to the VCC, GND, and pin 32 pins according to the color scheme. Then, run the following command in the servoPWM folder:
 
-Currently, there are few consumer solutions on the market that integrate Virtual Reality and Drones.
-Being able to use VR for controlling the drone allows for more intuitive control, which has applications in a variety of fields, where full immersion control is an unmet need, such as surveillance, emergency rescue services, reconnaissance in hard-to-reach areas, and entertainment.
+    sudo python calibration.py
+
+servoPWM is the code that actually runs the servo for the purposes of integration with VR. In order to execute it as a part of the VRView system, execute in the same folder:
+
+    sudo python servoPWM.py
 
 ## Hardware Used
 
@@ -71,6 +93,12 @@ A nice camera that is meant for use with Raspberry Pi. Full specs in the link ab
 
 32GB memory card compatible for use as Raspberry Pi storage. Full specs in the link above. It can be purchased on Amazon [here](https://www.amazon.com/dp/B01DOB6Y5Q/ref=sspa_dk_detail_6?psc=1).
 
+### 5. [Google Cardboard](https://vr.google.com/cardboard/)
+
+Google cardboard is a platform that allows for an affordable and accessible VR experience. The App can be downloaded from App Store and Google Play, while the cardboard can be purchased [here](https://vr.google.com/cardboard/get-cardboard/)
+
+
+
 ## Software Used
 
 ### 1. [Apache2 Server](http://httpd.apache.org)
@@ -80,3 +108,7 @@ Apache2 was installed on the Raspberry Pi to run a local HTTP server to broadcas
 ### 2. [Arduino](https://www.arduino.cc)
 
 Arduino software was used for calibrating the the servo, as well as programming it to respond to the gyroscopic inputs. Downloadable for desktop [here](https://www.arduino.cc/en/Main/Software), as an online editor (Arduino create) [here](https://create.arduino.cc).
+
+### 3. [Sensostream IMU+GPS](https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps)
+
+Sensostream was used for collecting and distributing the gyroscopic data over the local network using UDP stream. It can be downloaded from Google Play [here](https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps)
