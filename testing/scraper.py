@@ -15,4 +15,4 @@ data = soup.find('pre', attrs={'class': 'output'})
 
 beta = data.text.strip() # strip() is used to remove starting and trailing
 
-print beta
+print (beta)
