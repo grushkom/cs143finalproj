@@ -1,4 +1,4 @@
-# ![](http://micro.seas.harvard.edu/images/SEASLogo_RGB.jpg) 
+# ![](http://micro.seas.harvard.edu/images/SEASLogo_RGB.jpg)
 # VRView - The Gyroscopic Drone Camera
 # CS 143 Final Project
 # VR Camera with Gyroscopic Control
@@ -8,47 +8,47 @@
 ## Instructions for Using this Repository
 
 1. This is an open source project, so anyone can see the source code of the project. Feel free to browse or download the files in this repo. In order to get contributor priviliges, please talk to one of the team members.
-    If you want to copy this repository to your Raspberry Pi or any other machine, execute execute the following command inside the folder (where you want to store your repository) in your terminal: 
+    If you want to copy this repository to your Raspberry Pi or any other machine, execute execute the following command inside the folder (where you want to store your repository) in your terminal:
 
         git clone https://github.com/grushkom/cs143finalproj.git
-    
+
     You should be all set to start contributing!
-    
+
 2. Before starting work, execute the following command inside the es96wearable folder in your terminal:
 
          git pull
 
     This will make the repository on your computer up-to-date.
 
-3. To work on any of the files, use any sort of text editor or IDE you might 
-prefer. I suggest using Sublime Text 3, available to download for free [here](https://www.sublimetext.com/3). 
+3. To work on any of the files, use any sort of text editor or IDE you might
+prefer. I suggest using Sublime Text 3, available to download for free [here](https://www.sublimetext.com/3).
 
     Some of the code here is developed through specialized development environments: please see next sections for more details.
 
-4. In order to save progress into your **local** (on your machine) git repo, execute the following command inside the cs143finalproj folder in your terminal: 
+4. In order to save progress into your **local** (on your machine) git repo, execute the following command inside the cs143finalproj folder in your terminal:
 
          git commit -am "THE COMMIT'S NAME GOES HERE"
 
     please make sure commit messages are informative, so that is easier to track the versions.
-    In order to update the repository stored online with your new updates, execute: 
-    
+    In order to update the repository stored online with your new updates, execute:
+
          git push
-         
+
 ## Contents of the repository
 
 ### picam
 
-Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point. The Local IP address for accessing picam is [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/). 
+Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point. The Local IP address for accessing picam is [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/).
 
-### PiViewer 
+### PiViewer
 
 PiViewer is an localhost HTML/CSS/JS interface for streaming Google Cardboard - compatible livestream from the RPi camera. The Local IP address for accessing picam is [http://171.20.11.10/html/PiViewer/](http://171.20.11.10/html/PiViewer/).
 
 ### servoPWM
 
-ServoPWM is a folder with files that control the servo. It does so using Python, and specifically its library 
+ServoPWM is a folder with files that control the servo. It does so using Python, and specifically its library ... 
 
-## Problem Statement 
+## Problem Statement
 
 Currently, there are few consumer solutions on the market that integrate Virtual Reality and Drones.
 Being able to use VR for controlling the drone allows for more intuitive control, which has applications in a variety of fields, where full immersion control is an unmet need, such as surveillance, emergency rescue services, reconnaissance in hard-to-reach areas, and entertainment.
