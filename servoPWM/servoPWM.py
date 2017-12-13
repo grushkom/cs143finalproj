@@ -2,6 +2,7 @@
 # Import the Libraries Required
 import RPi.GPIO as GPIO
 import time
+import random
 
 SERVO_PIN = 32
 
@@ -28,29 +29,13 @@ if __name__ == '__main__':
 	servo.start(0)
 	while True:
 		try:
+                        randang = random.randint(0, 180)
+                        d = ang2duty(randang)
 			# Changing the Duty Cycle to rotate the motor 
-			servo.ChangeDutyCycle(ang2duty(0))
+			servo.ChangeDutyCycle(d)
+                        print "Current angle is {} degrees".format(randang)
 			# Sleep for 5 Seconds 
-			time.sleep(5)
-                        # Changing the Duty Cycle to rotate the motor
-			servo.ChangeDutyCycle(ang2duty(30))
-			# Sleep for 5 Seconds
-			time.sleep(5)
-                        servo.ChangeDutyCycle(ang2duty(60))
-			# Sleep for 5 Seconds
-			time.sleep(5)
-                        servo.ChangeDutyCycle(ang2duty(90))
-			# Sleep for 5 Seconds
-			time.sleep(5)
-                        servo.ChangeDutyCycle(ang2duty(120))
-			# Sleep for 5 Seconds
-			time.sleep(5)
-			servo.ChangeDutyCycle(ang2duty(150))
-			# Sleep for 5 Seconds
-			time.sleep(5)
-			servo.ChangeDutyCycle(ang2duty(180))
-			# Sleep for 5 Seconds
-			time.sleep(5)
+			time.sleep(0.2)
 
 		except KeyboardInterrupt:
 			servo.stop()
