@@ -38,7 +38,7 @@ prefer. I suggest using Sublime Text 3, available to download for free [here](ht
 
 ### picam
 
-Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point.
+picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point.
 
 In order to launch picam, make sure your RPi, as well as all other devices are connected to the same mobile hotspot, while RPi has [Apache2](https://httpd.apache.org). Check the status of the server by running the following in the terminal:
 
@@ -49,6 +49,8 @@ If the apache server is not runnning for whatever reason, run the following:
     sudo service apache2 start
 
 The server should be good to go. The picam itself will be accessible at the following link: [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/)
+
+The code prototype was taken from [here](https://elinux.org/RPi-Cam-Web-Interface)
 
 ### PiViewer
 
@@ -63,6 +65,8 @@ If the apache server is not runnning for whatever reason, run the following:
     sudo service apache2 start
 
 The server should be good to go. The picam itself will be accessible at the following link: [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/)
+
+The code prototype was taken from [here](https://www.sitepoint.com/streaming-a-raspberry-pi-camera-into-vr-with-javascript/)
 
 ### servoPWM
 
