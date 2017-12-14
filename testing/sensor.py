@@ -22,7 +22,7 @@ while 1:
                 # 111853.68583, 3,   0.280,  3.041,  9.180, 4,  -0.009, -0.023, -0.026, 5, -12.900,-38.700,-25.900
                 # print(messageString)
                 data = messageString.split(',')
-                print(data[7])
+                print(data)
 
         except (KeyboardInterrupt, SystemExit):
                 raise
