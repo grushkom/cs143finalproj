@@ -1,4 +1,5 @@
 import socket, traceback
+import time
 
 host = ''
 port = 5555
@@ -23,6 +24,7 @@ while 1:
                 print(messageString)
                 data = messageString.split(',')
                 print(data)
+                time.sleep(0.1)
 
         except (KeyboardInterrupt, SystemExit):
                 raise
