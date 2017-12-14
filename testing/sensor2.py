@@ -25,9 +25,9 @@ while True:
     	"%1.4f" %unpack_from ('!f', data, 36), 	# orientation
     	"%1.4f" %unpack_from ('!f', data, 40), 
     	"%1.4f" %unpack_from ('!f', data, 44)) 
-    x = unpack_from ('!f', data, 36)
+    # x = unpack_from ('!f', data, 36)
 
-    print (x)
+    # print (x)
 
     
 
