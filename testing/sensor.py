@@ -25,7 +25,7 @@ while 1:
                 # data = messageString.split(',')
                 # print(data)
                 # print(data[7].lstrip())
-                time.sleep(0.1)
+                time.sleep(0.5)
 
         except (KeyboardInterrupt, SystemExit):
                 raise
