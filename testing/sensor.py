@@ -21,10 +21,10 @@ while 1:
                 message, address = s.recvfrom(8192)
                 messageString = message.decode("utf-8")
                 # 111853.68583, 3,   0.280,  3.041,  9.180, 4,  -0.009, -0.023, -0.026, 5, -12.900,-38.700,-25.900
-                # print(messageString)
-                data = messageString.split(',')
+                print(messageString)
+                # data = messageString.split(',')
                 # print(data)
-                print(data[7].lstrip())
+                # print(data[7].lstrip())
                 time.sleep(0.1)
 
         except (KeyboardInterrupt, SystemExit):
