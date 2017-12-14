@@ -27,6 +27,7 @@ if __name__ == '__main__':
 	GPIO.setwarnings(False)
 
 	# Starting the PWM and setting the initial position of the servo with 50Hz frequency 
+
 	servo = GPIO.PWM(SERVO_PIN,50)
 	servo.start(0)
 
@@ -51,7 +52,7 @@ if __name__ == '__main__':
 			data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
 			x = "%1.f" %unpack_from ('!f', data, 36)
 			print(x)
-			conv = int(x) + 90
+			conv = (-1)*int(x) + 180
 			if conv < 0 :
 				conv = 0
 			elif conv > 180:
@@ -60,7 +61,6 @@ if __name__ == '__main__':
 			servo.ChangeDutyCycle(d)
 			print("Current angle is {} degrees".format(conv))
 			# Sleep for 5 Seconds 
-			time.sleep(0.2)
 
 		except KeyboardInterrupt:
 			servo.stop()
