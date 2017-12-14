@@ -50,10 +50,10 @@ if __name__ == '__main__':
 			# Changing the Duty Cycle to rotate the motor 
 			data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
 			x = "%1.f" %unpack_from ('!f', data, 36)
-    		print (x)
-
-			d = ang2duty(x)
-			servo.ChangeDutyCycle(d)
+                        print(x)
+                        conv = x + 90
+                        d = ang2duty(conv)
+                        servo.ChangeDutyCycle(d)
                         print "Current angle is {} degrees".format(randang)
 			# Sleep for 5 Seconds 
 			time.sleep(0.2)
