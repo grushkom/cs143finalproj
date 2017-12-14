@@ -24,6 +24,7 @@ while 1:
                 print(messageString)
                 data = messageString.split(',')
                 print(data)
+                print(data[7])
                 time.sleep(0.1)
 
         except (KeyboardInterrupt, SystemExit):
