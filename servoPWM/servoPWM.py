@@ -29,8 +29,8 @@ if __name__ == '__main__':
 	servo.start(0)
 	while True:
 		try:
-                        randang = random.randint(0, 180)
-                        d = ang2duty(randang)
+            randang = random.randint(0, 180)
+            d = ang2duty(randang)
 			# Changing the Duty Cycle to rotate the motor 
 			servo.ChangeDutyCycle(d)
                         print "Current angle is {} degrees".format(randang)
