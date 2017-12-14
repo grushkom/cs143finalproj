@@ -52,10 +52,10 @@ if __name__ == '__main__':
 			x = "%1.f" %unpack_from ('!f', data, 36)
 			print(x)
 			conv = int(x) + 90
-                        if conv < 0 :
-                                conv = 0
-                        elif conv > 180:
-                                conv = 180
+			if conv < 0 :
+				conv = 0
+			elif conv > 180:
+				conv = 180
 			d = ang2duty(conv)
 			servo.ChangeDutyCycle(d)
 			print("Current angle is {} degrees".format(conv))
