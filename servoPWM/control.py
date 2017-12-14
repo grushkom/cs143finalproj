@@ -9,8 +9,8 @@ from struct import *
 SERVO_PIN = 32
 
 def ang2duty (angle):
-        DutyCycle = (angle/18) + 2
-        return DutyCycle
+	DutyCycle = (angle/18) + 2
+	return DutyCycle
 
 if __name__ == '__main__':
 	# Setting the GPIO Mode to BOARD => Pin Count Mapping 
@@ -40,21 +40,21 @@ if __name__ == '__main__':
 	UDP_PORT = 5555
 	print ("Port: ", UDP_PORT)   
 	sock = socket.socket(socket.AF_INET, # Internet
-	                    socket.SOCK_DGRAM) # UDP
+						socket.SOCK_DGRAM) # UDP
 	sock.bind((UDP_IP, UDP_PORT))
 
 	while True:
 		try:
-            # randang = random.randint(0, 180)
-            # d = ang2duty(randang)
+			# randang = random.randint(0, 180)
+			# d = ang2duty(randang)
 			# Changing the Duty Cycle to rotate the motor 
 			data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
 			x = "%1.f" %unpack_from ('!f', data, 36)
-                        print(x)
-                        conv = x + 90
-                        d = ang2duty(conv)
-                        servo.ChangeDutyCycle(d)
-                        print "Current angle is {} degrees".format(randang)
+			print(x)
+			conv = x + 90
+			d = ang2duty(conv)
+			servo.ChangeDutyCycle(d)
+			print "Current angle is {} degrees".format(randang)
 			# Sleep for 5 Seconds 
 			time.sleep(0.2)
 
