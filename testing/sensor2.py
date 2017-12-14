@@ -3,12 +3,13 @@ from struct import *
 
 #UDP_IP = "96.49.100.238"
 #UDP_IP = "127.0.0.1"
-UDP_IP = socket.gethostbyname(socket.gethostname())
-print "Receiver IP: ", UDP_IP
+# UDP_IP = socket.gethostbyname(socket.gethostname())
+UDP_IP = 172.20.10.11
+print ("Receiver IP: ", UDP_IP)
 #UDP_PORT = 6000
 # UDP_PORT = int(raw_input ("Enter Port "))
 UDP_PORT = 5555
-print "Port: ", UDP_PORT   
+print ("Port: ", UDP_PORT)   
 sock = socket.socket(socket.AF_INET, # Internet
                     socket.SOCK_DGRAM) # UDP
 sock.bind((UDP_IP, UDP_PORT))
