@@ -4,7 +4,7 @@
 # Virtual Reality Camera with Gyroscopic Control
 # Mikhail Grushko and Matthew Li
 # README
-
+# Video on Youtube [HERE](https://youtu.be/4krU8vz3BOs)
 ## Instructions for Using this Repository
 
 1. This is an open source project, so anyone can see the source code of the project. Feel free to browse or download the files in this repo. In order to get contributor privileges, please talk to one of the team members.
@@ -40,7 +40,7 @@ prefer. I suggest using Sublime Text 3, available to download for free [here](ht
 
 Picam is a HTML/CSS/JS interface for the Raspberry Pi camera, which is accessible over the local access point.
 
-In order to launch picam, make sure your RPi, as well as all other devicea are connected to the same mobile hotspot, while RPi has [Apache2](https://httpd.apache.org). Check the status of the server by running the following in the terminal:
+In order to launch picam, make sure your RPi, as well as all other devices are connected to the same mobile hotspot, while RPi has [Apache2](https://httpd.apache.org). Check the status of the server by running the following in the terminal:
 
     sudo service apache2 status
 
@@ -57,9 +57,10 @@ PiViewer is an localhost HTML/CSS/JS interface for streaming Google Cardboard - 
 PiViewer is also run by the [Apache2](https://httpd.apache.org) server. Check the status of the server by running the following in the terminal:
 
     sudo service apache2 status
+    
 If the apache server is not runnning for whatever reason, run the following:
 
-    sudo service apache2 start.
+    sudo service apache2 start
 
 The server should be good to go. The picam itself will be accessible at the following link: [http://171.20.11.10/html/picam/](http://171.20.11.10/html/picam/)
 
@@ -71,9 +72,18 @@ calibration.py is the file we used to calibrate the servo. In order to run it, f
 
     sudo python calibration.py
 
-servoPWM is the code that actually runs the servo for the purposes of integration with VR. In order to execute it as a part of the VRView system, execute in the same folder:
+ control.py is the code that actually runs the servo for the purposes of integration with VR. In order to execute it as a part of the VRView system, execute in the same folder:
 
-    sudo python servoPWM.py
+    sudo python control.py
+
+if you execute the command more than once, you might find the error that the IP Address is already taken. To fix it, type in the command line:
+
+    s -fA | grep python
+
+Find the process number of the second process you see. Execute:
+
+    sudo kill -9 NUMBEROFSECONDPROCESS
+
 
 ## Hardware Used
 
@@ -109,6 +119,6 @@ Apache2 was installed on the Raspberry Pi to run a local HTTP server to broadcas
 
 Arduino software was used for calibrating the the servo, as well as programming it to respond to the gyroscopic inputs. Downloadable for desktop [here](https://www.arduino.cc/en/Main/Software), as an online editor (Arduino create) [here](https://create.arduino.cc).
 
-### 3. [Sensostream IMU+GPS](https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps)
+### 3. [sensorUDP](https://play.google.com/store/apps/details?id=com.ubccapstone.sensorUDP&hl=en&rdid=com.ubccapstone.sensorUDP)
 
-Sensostream was used for collecting and distributing the gyroscopic data over the local network using UDP stream. It can be downloaded from Google Play [here](https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps)
+sensorUDP was used for collecting and distributing the gyroscopic data over the local network using UDP stream. It can be downloaded from Google Play [here](https://play.google.com/store/apps/details?id=com.ubccapstone.sensorUDP&hl=en&rdid=com.ubccapstone.sensorUDP)
