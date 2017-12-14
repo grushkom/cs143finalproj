@@ -4,7 +4,7 @@
 # Virtual Reality Camera with Gyroscopic Control
 # Mikhail Grushko and Matthew Li
 # README
-# Video on Youtube [HERE](https://youtu.be/4krU8vz3BOs)
+# Video Demo on Youtube [HERE](https://youtu.be/4krU8vz3BOs)
 ## Instructions for Using this Repository
 
 1. This is an open source project, so anyone can see the source code of the project. Feel free to browse or download the files in this repo. In order to get contributor privileges, please talk to one of the team members.
@@ -57,7 +57,7 @@ PiViewer is an localhost HTML/CSS/JS interface for streaming Google Cardboard - 
 PiViewer is also run by the [Apache2](https://httpd.apache.org) server. Check the status of the server by running the following in the terminal:
 
     sudo service apache2 status
-    
+
 If the apache server is not runnning for whatever reason, run the following:
 
     sudo service apache2 start
@@ -66,7 +66,7 @@ The server should be good to go. The picam itself will be accessible at the foll
 
 ### servoPWM
 
-servoPWM is a folder with files that control the servo. It does so using Python, and specifically its library RPi.GPIO. The directory contains two files: calibration.py and servoPWM.py.
+servoPWM is a folder with files that control the servo. It does so using Python, and specifically its library RPi.GPIO. The directory contains two important files: calibration.py and servoPWM.py.
 
 calibration.py is the file we used to calibrate the servo. In order to run it, first connect the servo to the VCC, GND, and pin 32 pins according to the color scheme. Then, run the following command in the servoPWM folder:
 
